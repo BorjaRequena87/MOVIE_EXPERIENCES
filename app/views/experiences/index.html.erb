@@ -1,0 +1,14 @@
+<h3>🎥 Experiences 🎥</h3>
+
+  <% @experiences.each do |experience| %>
+    <%= link_to experience.title, experience_path(experience) %>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h2><%= experience.title %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+  <% end %>
+
+
+<%= link_to '- Add new experience -', new_experience_path  %>
