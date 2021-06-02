@@ -7,7 +7,7 @@
         <div class="card shadow-sm">
           <div class="card-header bg-transparent text-center">
             <img class="profile_img" src="https://kitt.lewagon.com/placeholder/users/cesar-bout" alt="">
-            <h3>Name</h3>
+            <h3><%= current_user.email %></h3>
           </div>
           <div class="card-body">
             <p class="mb-0"><strong class="pr-1">:</strong>4</p>
@@ -30,7 +30,10 @@
               <tr>
                 <th width="30%">Experiences incoming </th>
                 <td width="2%">:</td>
-                <td></td>
+                <td><% current_user.bookings.each do |booking|  %>
+                  <%= booking.experience.title %>
+                  <% end %>
+                </td>
               </tr>
               <tr>
                 <th width="30%">Email</th>
