@@ -5,7 +5,5 @@ class UsersController < ApplicationController
   end
 
   def show
-    @experience = Experience.new
-    @booking = Booking.new(user: @user)
   end
 end
