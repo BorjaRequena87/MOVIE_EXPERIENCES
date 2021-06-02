@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="title-header">
+     <h1> <%=  @experience.title %></h1>
+     <h3><%= @experience.address %></h3>
+  </div>
+    <img src=" <%= @experience.image_url %> "/>
+      <div class="description">
+        <p> ⭐ <%= @experience.rating %> </p>
+        <p> <%= @experience.description %> </p>
+        <div>
+          <p>Price: £<%= @experience.price %></p>
+        </div>
+      </div>
+      <%= link_to ‘I want this experience’, new_experience_booking_path  %>
+</div>
+
+

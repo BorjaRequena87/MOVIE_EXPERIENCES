@@ -3,6 +3,10 @@ class ExperiencesController < ApplicationController
     @experiences = Experience.all
   end
 
+  def show
+    @experience = Experience.find(params[:id])
+  end
+
   def new
     @experience = Experience.new
   end
@@ -25,5 +29,4 @@ class ExperiencesController < ApplicationController
   def find_experience
     @experience = Experience.find(params[:id])
   end
-
 end
