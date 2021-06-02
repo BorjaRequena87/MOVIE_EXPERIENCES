@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+// import the style of text
+body {
+  font-family: avenir;
+  background-color: #2E2E2E;
+}
