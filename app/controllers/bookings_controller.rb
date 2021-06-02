@@ -7,9 +7,10 @@ class BookingsController < ApplicationController
 
   def create
     @experience = Experience.find(params[:experience_id])
-    @booking = Booking.new(boooking_params)
+    @booking = Booking.new(booking_params)
     @booking.experience = @experience
-    if @booking.save
+    @booking.user = current_user
+    if @booking.save!
       redirect_to experience_path(@experience)
     else
       render :new
