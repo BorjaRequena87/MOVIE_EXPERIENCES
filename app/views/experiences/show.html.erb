@@ -1,0 +1,13 @@
+<div class="container d-flex">
+  <div class="experience-info">
+    <h1> 🎥 <%= @experience.title %> 🎥</h1>
+    <h3> <i> <%=  @experience.address %> </i> </h3>
+    <p> <%= @experience.description %> </p>
+    <p> ⭐ <%= @experience.rating %> </p>
+    <p> Price: £<%= @experience.price %> </p>
+    <%= link_to  'Book here!', experiences_path, class: "btn btn-success" %>
+    <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary" %>
+  </div>
+  <%= image_tag @experience.image_url , alt: "", class: "experience-img" %>
+</div>
+

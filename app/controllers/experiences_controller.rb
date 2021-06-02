@@ -7,6 +7,10 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new
   end
 
+  def show
+    @experience = Experience.find(params[:id])
+  end
+
   def create
     @experience = Experience.new(experiences_params)
     @experience.user = current_user
