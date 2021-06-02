@@ -5,7 +5,8 @@
     <p> <%= @experience.description %> </p>
     <p> ⭐ <%= @experience.rating %> </p>
     <p> Price: £<%= @experience.price %> </p>
-    <%= link_to  'Book here!', experiences_path, class: "btn btn-success" %>
+    <%= link_to 'Book here!', new_experience_booking_path, class: "btn btn-success" %>
+    <%#= link_to ‘I want this experience’, new_experience_booking_path %>
     <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary" %>
   </div>
   <%= image_tag @experience.image_url , alt: "", class: "experience-img" %>
