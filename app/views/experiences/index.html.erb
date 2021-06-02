@@ -1,14 +1,23 @@
 <h3>🎥 Experiences 🎥</h3>
 
   <% @experiences.each do |experience| %>
-    <%= link_to experience.title, experience_path(experience) %>
-    <div class="card-product">
+
+<!--     <div class="card-product">
       <div class="card-product-infos">
-        <h2><%= experience.title %></h2>
+        <h2><%= link_to experience.title, experience_path(experience) %></h2>
         <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div> -->
+
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <h3><%= link_to experience.title, experience_path(experience) %></h2>
       </div>
     </div>
   <% end %>
 
 
 <%= link_to '- Add new experience -', new_experience_path  %>
+
+
+
