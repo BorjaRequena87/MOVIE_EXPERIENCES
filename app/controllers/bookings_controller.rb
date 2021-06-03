@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
     @experience = Experience.find(params[:experience_id])
@@ -20,7 +19,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :experience_id)
+    params.require(:booking).permit(:user_id, :experience_id, :start_date, :end_date)
   end
-
 end
