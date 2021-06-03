@@ -6,9 +6,13 @@
     <p> ⭐ <%= @experience.rating %> </p>
     <p> Price: £<%= @experience.price %> </p>
     <%#= link_to ‘I want this experience’, new_experience_booking_path %>
-    <%= simple_form_for ([@experience, @booking]) do |f| %>
-      <%= f.input :booking_details, placeholder: 'When do you want to book?' %>
-      <%#= f.submit link_to, user_path %>
+    <%#= simple_form_for ([@experience, @booking]) do |f| %>
+      <%#= f.input :date,  %>
+    <%# end %>
+    <%= simple_form_for([@experience, @booking], url: user_path(current_user)) do |f| %>
+      <%= f.input :booking_date, start_year: Time.now.year %>
+      <%= f.input :booking_details, label: 'Any questions or requests?', placeholder: 'Please type your message here.' %>
+      <%= f.submit %>
     <% end %>
     <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary" %>
   </div>
