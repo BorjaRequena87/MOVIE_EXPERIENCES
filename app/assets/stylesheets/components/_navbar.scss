@@ -1,8 +1,9 @@
 .navbar-lewagon {
   display: flex;
   margin: auto;
-  margin-top: -17px;
-  position: sticky;
+  height: 62px;
+  position: fixed;
+  width: 100%;
   flex-wrap: wrap;
   z-index: 1000;
   justify-content: space-between;
