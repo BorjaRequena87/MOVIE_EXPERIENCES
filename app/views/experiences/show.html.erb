@@ -1,20 +1,22 @@
 <div class="container d-flex">
   <div class="experience-info">
-    <h1> 🎥 <%= @experience.title %> 🎥</h1>
+    <h1> <%= @experience.title %> </h1>
     <h3> <i> <%=  @experience.address %> </i> </h3>
     <p> <%= @experience.description %> </p>
-    <p> ⭐ <%= @experience.rating %> </p>
+    <div class="ratings-price d-flex">
+    <p> <i class="fas fa-star"></i> <%= @experience.rating %> </p>
     <p> Price: £<%= @experience.price %> </p>
+    </div>
     <%#= link_to ‘I want this experience’, new_experience_booking_path %>
     <%#= simple_form_for ([@experience, @booking]) do |f| %>
       <%#= f.input :date,  %>
     <%# end %>
-    <%= simple_form_for([@experience, @booking], url: user_path(current_user)) do |f| %>
+    <%= simple_form_for([@experience, @booking]) do |f| %>
       <%= f.input :booking_date, start_year: Time.now.year %>
       <%= f.input :booking_details, label: 'Any questions or requests?', placeholder: 'Please type your message here.' %>
       <%= f.submit %>
     <% end %>
-    <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary" %>
+    <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary m-3" %>
   </div>
   <%= image_tag @experience.image_url , alt: "", class: "experience-img" %>
 </div>
