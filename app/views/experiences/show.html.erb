@@ -1,11 +1,13 @@
 <div class="container d-flex">
   <div class="experience-info">
-    <h1> <%= @experience.title %> </h1>
-    <h3> <i> <%=  @experience.address %> </i> </h3>
-    <p> <%= @experience.description %> </p>
-    <div class="ratings-price d-flex">
-    <p> <i class="fas fa-star"></i> <%= @experience.rating %> </p>
-    <p> Price: £<%= @experience.price %> </p>
+    <div class="box2">
+      <h1> <%= @experience.title %> </h1>
+      <h3> <i> <%=  @experience.address %> </i> </h3>
+      <p> <%= @experience.description %> </p>
+      <div class="ratings-price d-flex">
+        <p> <i class="fas fa-star" id="star"></i> <%= @experience.rating %> </p>
+        <p> Price: £<%= @experience.price %> </p>
+      </div>
     </div>
     <%#= link_to ‘I want this experience’, new_experience_booking_path %>
     <%#= simple_form_for ([@experience, @booking]) do |f| %>
