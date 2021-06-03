@@ -14,17 +14,12 @@
   flex-grow: 0;
 }
 
-//.navbar-lewagon .navbar-brand img {
-  //width: 40px;
-//}
-
 .nav-link {
   color: white !important;
 }
 
-.fas {
+.fa-film {
   color: white;
-  font-size: 40px;
 }
 
 .btn:not(:disabled):not(.disabled) {
@@ -72,29 +67,14 @@
   margin-top: 0px;
   font-size: 15px;
 }
-// .navbar {
-//   height: 40xp;
-// }
 
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: #2E2E2E;
-//   background-color: transparent;
-//   transition: 0.5s background-color ease;
+.avatar {
+   height: 45px;
+   width: 40px;
+   border-radius: 50%;
+   margin-left: 15px;
+ }
 
-// }
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon-white {
-//   background-color: #2E2E2E;
-// }
-// .navbar-container {
-//   margin-bottom: 60px;
-// }
-// .avatar {
-//   height: 40px;
-//   width: 40px;
-//   border-radius: 50%;
+// .avatar:hover {
+//   box-shadow: 0 0 5px rgb(255 255 255 / 80%);
 // }

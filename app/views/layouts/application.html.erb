@@ -27,22 +27,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <% if current_user %>
+            <li class="nav-item dropdown">
+                <span>Welcome, Tom!</span>
+                <%= image_tag "https://images.mubicdn.net/images/cast_member/2184/cache-2992-1547409411/image-w856.jpg?size=800x", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-          <li class="nav-item active btn btn-ghost" href="#">
-            <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
-          </li>
-
-          <li class="nav-item dropdown">
-            <%= image_tag "https://images.mubicdn.net/images/cast_member/2184/cache-2992-1547409411/image-w856.jpg?size=800x", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <% if current_user %>
-              <%= link_to "Your Profile", user_path(current_user), class: "dropdown-item" %>
-              <%= link_to "New Experience", new_experience_path, class: "dropdown-item" %>
-              <% end %>
-              <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
-            </div>
-          </li>
-
+                  <%= link_to "Your Profile", user_path(current_user), class: "dropdown-item" %>
+                  <%= link_to "New Experience", new_experience_path, class: "dropdown-item" %>
+                  <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+          <% else  %>
+              <li class="nav-item active btn btn-ghost" href="#">
+              <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+              </li>
+          <% end %>
+                </div>
+            </li>
         </ul>
       </div>
     </div>
@@ -74,5 +74,7 @@
       </div>
     </div>
     <!-- end of footer -->
+    <script src="confetti.js"></script>
   </body>
 </html>
+
