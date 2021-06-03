@@ -13,20 +13,27 @@
     margin: 30px;
   }
   h3 {
+    font-weight: light;
     margin: 5px;
   }
   p {
-    margin: 30px;
+    margin: 35px;
   }
 }
 
 .experience-img {
-  height: 90vh;
+  margin-top: 16px;
+  height: 105vh;
   border-radius: 15px;
   box-shadow: 0 0 5px rgba(255,255,255,0.8);
+  margin-bottom: 16px;
 }
 
 .ratings-price {
   display: flex;
   justify-content: space-evenly;
+  }
+
+#star {
+  font-size: 20px;
 }
