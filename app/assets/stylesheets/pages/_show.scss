@@ -1,16 +1,32 @@
 .experience-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   a {
     width: 300px;
     display: inline-block;
   }
   h1 {
-
+    font-weight: bold;
+    margin: 30px;
+  }
+  h3 {
+    margin: 5px;
+  }
+  p {
+    margin: 30px;
   }
 }
 
 .experience-img {
-  height: 90vh
+  height: 90vh;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.8);
+}
+
+.ratings-price {
+  display: flex;
+  justify-content: space-evenly;
 }
