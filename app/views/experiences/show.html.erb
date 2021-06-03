@@ -4,6 +4,8 @@
       <h1> <%= @experience.title %> </h1>
       <h3> <i> <%=  @experience.address %> </i> </h3>
       <p> <%= @experience.description %> </p>
+      <a style= "color:white" href="https://www.google.com/maps/place/Curzon+Soho/@51.5127029,-0.1327669,17z/data=!3m1!4b1!4m5!3m4!1s0x487604d2f64ffb47:0xc9b10284ebca42e7!8m2!3d51.512678!4d-0.1305926" target="_blank">take me there</a>
+
       <div class="ratings-price d-flex">
         <p> <i class="fas fa-star" id="star"></i> <%= @experience.rating %> </p>
         <p> Price: £<%= @experience.price %> </p>
@@ -21,4 +23,9 @@
     <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-primary m-3" %>
   </div>
   <%= image_tag @experience.image_url , alt: "", class: "experience-img" %>
+</div>
+
+<div class="img__wrap">
+  <img class="img__img" src="http://placehold.it/257x200.jpg" />
+  <p class="img__description">This image looks super neat.</p>
 </div>

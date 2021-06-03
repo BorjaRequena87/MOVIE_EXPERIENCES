@@ -1,5 +1,5 @@
 <div id= "confetti" class="flash flash-success alert alert-dismissible fade show" role="alert">
-  <span><strong>Yay!</strong> 🎉 We promisse you will enjoy this experience</span>
+  <span><strong>Yay!</strong> 🎉 We promise you will enjoy this experience</span>
   <a data-dismiss="alert" aria-label="Close">
     <i class="fas fa-times"></i>
   </a>
@@ -25,7 +25,9 @@
   <div class="box">
     <div class= "text">
       <div>
+        <br>
         <h4 >Previous experiences :</h4>
+        <br>
         <p><i class="fas fa-video"></i>  Harry Potter on the 6th of March 2019</p>
         <p><i class="fas fa-video"></i>  Shaun of the Dead on the 11th of June 2019</p>
         <!-- <td ><%#= current_user.booking_details %></td> -->
@@ -33,6 +35,7 @@
 
       <div class= "nextexperience">
         <h4 >Your next experiences :</h4>
+        <br>
         <p >Time of your booking :   <%= @user.bookings.last.created_at %></p>
         <p >You've picked :   <%= @user.bookings.last.experience.title %></p>
         <p ><%= @user.bookings.last.experience.description %></p>
