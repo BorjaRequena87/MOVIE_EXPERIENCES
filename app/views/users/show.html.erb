@@ -33,16 +33,18 @@
 
       <div class= "nextexperience">
         <h4 >Your next experiences :</h4>
-        <p >Time of your booking :<%= @user.bookings.last.created_at %></p>
-        <p >You've picked :<%= @user.bookings.last.experience.title %></p>
-        <p >You've picked :<%= @user.bookings.last.booking_details %></p>
+        <p >Time of your booking :   <%= @user.bookings.last.created_at %></p>
+        <p >You've picked :   <%= @user.bookings.last.experience.title %></p>
+        <p ><%= @user.bookings.last.experience.description %></p>
+        <p ><%= @user.bookings.last.experience.price %>£</p>
       </div>
     </div>
 
-    <div class="d-flex justify-content-center" >
-      <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-ghost" %>
+    <div class="button">
+      <div class="d-flex justify-content-center" >
+        <%= link_to  'Back to Experiences', experiences_path, class: "btn btn-ghost" %>
+      </div>
     </div>
-
   </div>
 
 
