@@ -20,13 +20,14 @@
 
 .fa-film {
   color: white;
+  font-size: 35px;
 }
 
-.btn:not(:disabled):not(.disabled) {
+.navbar .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
 
-.btn-ghost {
+.navbar .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 2px 20px;
@@ -36,7 +37,7 @@
   transition: opacity 0.3s ease;
 }
 
-.btn {
+.navbar .btn {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
