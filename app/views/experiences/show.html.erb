@@ -16,7 +16,7 @@
       <%#= f.input :date,  %>
     <%# end %>
     <%= simple_form_for([@experience, @booking]) do |f| %>
-      <%= f.input :booking_date, start_year: Time.now.year %>
+      <%= f.input :booking_date %>
       <%= f.input :booking_details, label: 'Any questions or requests?', placeholder: 'Please type your message here.' %>
       <%= f.submit %>
     <% end %>
