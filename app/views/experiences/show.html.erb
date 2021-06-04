@@ -4,11 +4,10 @@
       <h1> <%= @experience.title %> </h1>
       <h3> <i> <%=  @experience.address %> </i> </h3>
       <p> <%= @experience.description %> </p>
-      <a style= "color:white" href="https://www.google.com/maps/place/Curzon+Soho/@51.5127029,-0.1327669,17z/data=!3m1!4b1!4m5!3m4!1s0x487604d2f64ffb47:0xc9b10284ebca42e7!8m2!3d51.512678!4d-0.1305926" target="_blank">take me there</a>
-
+      <a target='_blank' href="https://www.google.com/maps/place/Blackfriars+Bridge/@51.5096426,-0.1065715,17z/data=!3m1!4b1!4m5!3m4!1s0x487604ad954d31a7:0x4e26b9c44832a446!8m2!3d51.5096426!4d-0.1043828" class="btn btn-primary align-items"><i><i class="fas fa-map-marker-alt"></i></i>Take me there!</a>
       <div class="ratings-price d-flex">
         <p> <i class="fas fa-star" id="star"></i> <%= @experience.rating %> </p>
-        <p> Price: £<%= @experience.price %>
+        <p> <strong>Price:</strong> £<%= @experience.price %>
       </div>
     </div>
     <%#= link_to ‘I want this experience’, new_experience_booking_path %>
@@ -33,9 +32,4 @@
   <p class="img__description">sdfs<%= @experience.quote %></p>
 </div>
  -->
-
-<div class="img__wrap">
-  <img class="img__img" src="https://i.kym-cdn.com/photos/images/facebook/001/675/560/002.jpg" />
-  <p class="img__description">here the text<%= @experience.quote %></p>
-</div>
 
