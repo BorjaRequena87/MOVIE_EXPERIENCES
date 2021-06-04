@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('canvas-confetti');
+//require('canvas-confetti');
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -30,16 +30,16 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 
-import JSConfetti from 'js-confetti'
+// import JSConfetti from 'js-confetti'
 
-const jsConfetti = new JSConfetti()
-const confetti = document.getElementById("confetti");
+// const jsConfetti = new JSConfetti()
+// const confetti = document.getElementById("confetti");
 
 
 document.addEventListener('turbolinks:load', () => {
-  if (confetti) {
-  jsConfetti.addConfetti()
-  };
+  // if (confetti) {
+  // jsConfetti.addConfetti()
+  // };
 
 
   // Call your functions here, e.g:
