@@ -8,7 +8,7 @@
 
       <div class="ratings-price d-flex">
         <p> <i class="fas fa-star" id="star"></i> <%= @experience.rating %> </p>
-        <p> Price: £<%= @experience.price %> </p>
+        <p> Price: £<%= @experience.price %>
       </div>
     </div>
     <%#= link_to ‘I want this experience’, new_experience_booking_path %>
@@ -25,7 +25,17 @@
   <%= image_tag @experience.image_url , alt: "", class: "experience-img" %>
 </div>
 
-<div class="img__wrap">
+
+
+<!-- ORIGINAL -->
+<!-- <div class="img__wrap">
   <img class="img__img" src="http://placehold.it/257x200.jpg" />
-  <p class="img__description">This image looks super neat.</p>
+  <p class="img__description">sdfs<%= @experience.quote %></p>
 </div>
+ -->
+
+<div class="img__wrap">
+  <img class="img__img" src="https://i.kym-cdn.com/photos/images/facebook/001/675/560/002.jpg" />
+  <p class="img__description">here the text<%= @experience.quote %></p>
+</div>
+
