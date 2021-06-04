@@ -1,10 +1,10 @@
-<!-- <div id= "confetti" class="flash flash-success alert alert-dismissible fade show" role="alert">
+<div id= "confetti" class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Yay!</strong> 🎉 We promise you will enjoy this experience</span>
   <a data-dismiss="alert" aria-label="Close">
     <i class="fas fa-times"></i>
   </a>
 </div>
- -->
+
 
 
 
@@ -36,11 +36,10 @@
       <div class= "nextexperience">
         <h4 >Your next experiences :</h4>
         <br>
-        <p >Time of your booking :   <%= @user.bookings.last.created_at %></p>
+        <p >Time of your booking :   <%= @user.bookings.last.booking_date.strftime('%d %B %Y') %></p>
         <p >You've picked :   <%= @user.bookings.last.experience.title %></p>
-        <p ><%= @user.bookings.last.experience.description %></p>
+        <p >Your comment: <%= @user.bookings.last.booking_details %></p>
         <p >£<%= @user.bookings.last.experience.price %></p>
-        <p ><%= @user.bookings.last.booking_details %></p>
       </div>
     </div>
 
